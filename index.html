@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркет Кровля Мариуполь — Монтаж и ремонт крыш под ключ</title>
+    <style>
+        /* Общие стили и сброс */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #e65c00; /* Строительный оранжевый */
+            --dark-color: #2c3e50;    /* Антрацит */
+            --light-bg: #f9f9f9;
+            --text-color: #333;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка сайта */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-box {
+            display: table;
+            width: 100%;
+        }
+
+        .logo-area {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .logo-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .logo-title span {
+            color: var(--primary-color);
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+
+        .contacts-area {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+        }
+
+        .phone-link {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--dark-color);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #cc5200;
+        }
+
+        /* Главный экран с видео-фоном */
+        .hero {
+            position: relative;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            overflow: hidden;
+            background-color: var(--dark-color);
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 62, 80, 0.75);
+            z-index: 2;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-features {
+            display: table;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .hero-feat-item {
+            display: table-cell;
+            width: 33.33%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .hero-feat-item strong {
+            display: block;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        /* Секции */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--dark-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        /* Услуги */
+        .services-table {
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+        }
+
+        .services-row {
+            display: table-row;
+        }
+
+        .service-card {
+            display: table-cell;
+            background: #fff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            width: 33.33%;
+            vertical-align: top;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            font-size: 20px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* Квиз / Форма */
+        .quiz-section {
+            background-color: var(--light-bg);
+        }
+
+        .quiz-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Стили для верстки слайдеров до / после */
+        .portfolio-section {
+            background-color: #ffffff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .slider-card {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            padding: 15px;
+        }
+
+        .slider-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+
+        .slider-card-desc {
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .compare-slider {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 4px;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .compare-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .img-before-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .img-before-wrapper .compare-img {
+            max-width: none;
+            object-fit: cover;
+        }
+
+        .label-tag {
+            position: absolute;
+            top: 15px;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 3;
+            pointer-events: none;
+            border-radius: 3px;
+            color: #fff;
+        }
+        .tag-before { left: 15px; background: rgba(192, 57, 43, 0.9); }
+        .tag-after { right: 15px; background: rgba(39, 174, 96, 0.9); }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            background-color: var(--primary-color);
+            z-index: 4;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .slider-button::before, .slider-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .slider-button::before {
+            border-width: 4px 6px 4px 0;
+            border-color: transparent var(--primary-color) transparent transparent;
+            margin-right: 4px;
+        }
+        .slider-button::after {
+            border-width: 4px 0 4px 6px;
+            border-color: transparent transparent transparent var(--primary-color);
+            margin-left: 4px;
+        }
+
+        /* Преимущества */
+        .adv-table {
+            display: table;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+        }
+
+        .adv-item {
+            display: table-cell;
+            width: 25%;
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .adv-icon {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .adv-item h4 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .adv-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: var(--dark-color);
+            color: #fff;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+
+        .footer-table {
+            display: table;
+            width: 100%;
+        }
+
+        .footer-col {
+            display: table-cell;
+            width: 50%;
+            vertical-align: middle;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        /* Мобильная адаптивность */
+        @media (max-width: 768px) {
+            .header-box, .services-table, .services-row, .service-card, .hero-features, .hero-feat-item, .adv-table, .adv-item, .footer-table, .footer-col {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                margin-bottom: 20px;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .compare-slider {
+                height: 260px;
+            }
+            .contacts-area {
+                text-align: center !important;
+                margin-top: 15px;
+            }
+            .phone-link {
+                display: block;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-box">
+                <div class="logo-area">
+                    <div class="logo-title">Маркет<span>Кровля</span></div>
+                    <div class="logo-subtitle">Профессиональный монтаж и ремонт крыш в Мариуполе</div>
+                </div>
+                <div class="contacts-area">
+                    <a href="tel:+79498350100" class="phone-link">+7 (949) 835-01-00</a>
+                    <a href="#quiz" class="btn">Консультация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="https://spec-krovlya.ru/wp-content/uploads/2018/06/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="container">
+            <h1>Надежная кровля для вашего дома<br>в Мариуполе под ключ</h1>
+            <p>Монтаж, ремонт и обслуживание крыш любой сложности с гарантией по договору от 5 лет. Выезд замерщика и составление сметы — бесплатно!</p>
+            <a href="#quiz" class="btn" style="padding: 15px 30px; font-size: 18px;">Рассчитать стоимость крыши</a>
+            
+            <div class="hero-features">
+                <div class="hero-feat-item">
+                    <strong>0 руб</strong>
+                    <p>Замер и смета</p>
+                </div>
+                <div class="hero-feat-item">
+                    <strong>от 5 лет</strong>
+                    <p>Гарантия на работу</p>
+                </div>
+                <div class="hero-feat-item">
+                    <strong>100%</strong>
+                    <p>Соблюдение сроков</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            
+            <div class="services-table">
+                <div class="services-row">
+                    <div class="service-card">
+                        <h3>Монтаж новой кровли</h3>
+                        <p>Качественное устройство кровли из металлочерепицы, профнастила, мягкой и битумной черепицы. Подбор материалов под ваш бюджет.</p>
+                        <strong>От 450 руб/м²</strong>
+                    </div>
+                    <div class="service-card">
+                        <h3>Ремонт кровли</h3>
+                        <p>Устранение протечек, замена поврежденных листов, ремонт гидроизоляции и стропильной системы любой сложности в кратчайшие сроки.</p>
+                        <strong>От 200 руб/м²</strong>
+                    </div>
+                    <div class="service-card">
+                        <h3>Реконструкция крыш</h3>
+                        <p>Полный демонтаж старого покрытия (шифер, рубероид) и монтаж современной надежной кровли с утеплением и водостоком.</p>
+                        <strong>От 600 руб/м²</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Быстрый расчет стоимости кровли</h2>
+            <div class="quiz-container">
+                <form id="roofForm">
+                    <div class="form-group">
+                        <label for="roof-type">Тип услуги:</label>
+                        <select id="roof-type" required>
+                            <option value="">-- Выберите вариант --</option>
+                            <option value="Монтаж новой кровли под ключ">Монтаж новой кровли под ключ</option>
+                            <option value="Капитальный или текущий ремонт">Капитальный или текущий ремонт</option>
+                            <option value="Замена старой крыши на новую">Замена старой крыши на новую</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="material">Желаемый материал покрытия:</label>
+                        <select id="material" required>
+                            <option value="">-- Выберите материал --</option>
+                            <option value="Металлочерепица / Профнастил">Металлочерепица / Профнастил</option>
+                            <option value="Мягкая гибкая кровля">Мягкая гибкая кровля</option>
+                            <option value="Нужна консультация специалиста">Нужна консультация специалиста</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Примерная площадь крыши (кв.м.):</label>
+                        <input type="number" id="area" placeholder="Например: 120" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Ваш номер телефона для связи:</label>
+                        <input type="tel" id="phone" placeholder="+7 (949) 000-00-00" required>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn" style="width: 100%; padding: 15px; font-size: 18px; margin-top: 10px;">Получить расчет и скидку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Примеры наших работ (До / После)</h2>
+            
+            <div class="portfolio-grid">
+                
+                <div class="slider-card">
+                    <div class="slider-card-title">Замена старого шифера на металлочерепицу</div>
+                    <div class="slider-card-desc">Площадь объекта: 145 кв.м. Ремонт стропильной системы под ключ.</div>
+                    
+                    <div class="compare-slider">
+                        <img class="compare-img" src="img/obj1-after.jpg" alt="После">
+                        <span class="label-tag tag-after">После</span>
+                        
+                        <div class="img-before-wrapper">
+                            <img class="compare-img" src="img/obj1-before.jpg" alt="До">
+                            <span class="label-tag tag-before">До</span>
+                        </div>
+                        
+                        <div class="slider-handle">
+                            <div class="slider-button"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="slider-card-title">Капитальное устранение протечек крыши</div>
+                    <div class="slider-card-desc">Монтаж профнастила, замена гидроизоляции и карнизов.</div>
+                    
+                    <div class="compare-slider">
+                        <img class="compare-img" src="img/obj2-after.jpg" alt="После">
+                        <span class="label-tag tag-after">После</span>
+                        
+                        <div class="img-before-wrapper">
+                            <img class="compare-img" src="img/obj2-before.jpg" alt="До">
+                            <span class="label-tag tag-before">До</span>
+                        </div>
+                        
+                        <div class="slider-handle">
+                            <div class="slider-button"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="adv-table">
+                <div class="adv-item">
+                    <div class="adv-icon">🛠️</div>
+                    <h4>Работаем в Мариуполе</h4>
+                    <p>Оперативный выезд на объекты в любой район города и ближайший пригород.</p>
+                </div>
+                <div class="adv-item">
+                    <div class="adv-icon">📜</div>
+                    <h4>Официальный договор</h4>
+                    <p>Фиксируем цену и сроки выполнения до начала работ. Никаких скрытых платежей.</p>
+                </div>
+                <div class="adv-item">
+                    <div class="adv-icon">💎</div>
+                    <h4>Качественные материалы</h4>
+                    <p>Помогаем закупить проверенные материалы напрямую от поставщиков по оптовым ценам.</p>
+                </div>
+                <div class="adv-item">
+                    <div class="adv-icon">👨‍🏭</div>
+                    <h4>Опытные мастера</h4>
+                    <p>Профессиональные бригады кровельщиков со стажем работы более 7 лет.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="callback">
+        <div class="container">
+            <div class="footer-table">
+                <div class="footer-col">
+                    <div class="logo-title" style="color: #fff;">Маркет<span>Кровля</span></div>
+                    <p style="margin-top: 10px; color: #bdc3c7;">© 2026 Все права защищены.<br>Кровельные работы в Мариуполе и области.</p>
+                </div>
+                <div class="footer-col footer-right">
+                    <p><strong>Контакты:</strong></p>
+                    <p style="font-size: 18px; margin: 5px 0;"><a href="tel:+79498350100" style="color: #fff; text-decoration: none;">+7 (949) 835-01-00</a></p>
+                    <p style="color: #bdc3c7;">Адрес: г. Мариуполь, Centralный район<br>Режим работы: Ежедневно с 7:00 до 19:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('roofForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Токен бота
+            const TELEGRAM_TOKEN = '8342036809:AAHQPfZlkXstXp_noIsw2a4v_HbV3rHy69I';
+            
+            // Массив ID пользователей (первый старый, второй новый)
+            const TELEGRAM_CHAT_IDS = ['5343167597', '5191748134'];
+
+            const roofType = document.getElementById('roof-type').value;
+            const material = document.getElementById('material').value;
+            const area = document.getElementById('area').value;
+            const phone = document.getElementById('phone').value;
+
+            let message = `🔔 *Новая заявка на сайте Маркет Кровля!*\n\n`;
+            message += `🛠 *Тип услуги:* ${roofType}\n`;
+            message += `🏠 *Материал крыши:* ${material}\n`;
+            message += `📐 *Площадь:* ${area} кв.м.\n`;
+            message += `📞 *Телефон для связи:* ${phone}`;
+
+            const submitButton = document.getElementById('submitBtn');
+            const originalButtonText = submitButton.innerText;
+            submitButton.innerText = 'Отправка...';
+            submitButton.disabled = true;
+
+            const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+
+            // Создаем массив промисов для параллельной отправки обоим администраторам
+            const requests = TELEGRAM_CHAT_IDS.map(chatId => {
+                return fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
+                        parse_mode: 'Markdown'
+                    })
+                });
+            });
+
+            // Обрабатываем выполнение всех запросов одновременно
+            Promise.all(requests)
+            .then(responses => {
+                // Выясняем, сколько сообщений было доставлено успешно
+                const successCount = responses.filter(r => r.ok).length;
+                
+                if (successCount === TELEGRAM_CHAT_IDS.length) {
+                    alert('Заявка успешно отправлена всем администраторам! Мы свяжемся с вами в ближайшее время.');
+                    document.getElementById('roofForm').reset();
+                } else if (successCount > 0) {
+                    alert('Заявка принята, но кто-то из менеджеров не получил её. Убедитесь, что оба аккаунта активировали и запустили бота (нажали кнопку Старт в чате).');
+                    document.getElementById('roofForm').reset();
+                } else {
+                    alert('Ошибка при отправке! Пожалуйста, убедитесь, что вы запустили вашего бота в Telegram (нажали кнопку Старт внутри чата с ним).');
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка сети:', error);
+                alert('Не удалось связаться с сервером Telegram. Убедитесь, что сайт открыт через локальный сервер (например, Live Server в VS Code), а не как простой файл.');
+            })
+            .finally(() => {
+                submitButton.innerText = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+
+        // ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРОВ СРАВНЕНИЯ (ПК + ТАЧ-ЭКРАНЫ)
+        document.querySelectorAll('.compare-slider').forEach(slider => {
+            const widthWrapper = slider.querySelector('.img-before-wrapper');
+            const handle = slider.querySelector('.slider-handle');
+            const imgBefore = widthWrapper.querySelector('.compare-img');
+
+            const resizeImg = () => {
+                imgBefore.style.width = slider.offsetWidth + 'px';
+            };
+            window.addEventListener('resize', resizeImg);
+            resizeImg();
+
+            const moveSlider = (clientX) => {
+                const rect = slider.getBoundingClientRect();
+                let x = clientX - rect.left;
+                
+                if (x < 0) x = 0;
+                if (x > rect.width) x = rect.width;
+
+                const percent = (x / rect.width) * 100;
+                widthWrapper.style.width = percent + '%';
+                handle.style.left = percent + '%';
+            };
+
+            let isDragging = false;
+
+            slider.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                moveSlider(e.clientX);
+            });
+
+            window.addEventListener('mouseup', () => isDragging = false);
+            
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                moveSlider(e.clientX);
+            });
+
+            slider.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                moveSlider(e.touches[0].clientX);
+            });
+
+            window.addEventListener('touchend', () => isDragging = false);
+
+            slider.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                moveSlider(e.touches[0].clientX);
+            });
+        });
+    </script>
+
+</body>
+</html>
